@@ -1,0 +1,11 @@
+Projet perso 
+Site web app plus tard
+conseil routine cheveux plus-tard (visage pieux et mains)
+fonctionnalités
+soichir parmis les 
+-connaitre son types de cheveux si oui -choisir son probleme
+				si non - faire le test pour le connaitre
+- choisire la frequence de son washday
+- choir les type de produit -maison ou - indrusitiel
+
+ 
