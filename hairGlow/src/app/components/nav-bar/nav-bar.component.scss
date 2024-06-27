@@ -1,0 +1,148 @@
+@use '../../../import' as *;
+
+header {
+    background-color: $navbar-color;
+    color: $text-color-light;
+    padding-bottom: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 116px;
+        overflow: hidden;
+
+        a {
+            text-decoration: none;
+
+            .logo {
+                width: 40%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+
+        }
+
+        .mobile {
+            width: 15%;
+
+            .bars.open .bar:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+                z-index: 9;
+            }
+
+            .bars.open .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .bars.open .bar:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+                z-index: 9;
+            }
+
+            .bars {
+                width: 32px;
+                height: 26px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+
+                .bar {
+                    height: 3px;
+                    width: 100%;
+                    background-color: $background-color;
+                    transition: all 0.3s;
+                }
+            }
+
+            .mobile-menu {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: $navbar-color;
+                width: 40%;
+                height: 100vh;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 2rem 0;
+
+                ul {
+                    top: 10%;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                    margin-left: 32px;
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            text-decoration: none;
+                            color: $text-color-light;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .dekstop-items {
+            display: none;
+        }
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        nav {
+            .mobile {
+                display: none;
+                justify-content: flex-end;
+            }
+
+            .dekstop-items {
+                display: block;
+                width: 80%;
+                ul{
+                    display: flex;
+                    gap: 20px;
+                    margin-right: 38px;
+                    li{
+                        list-style: none;
+                        a{
+                            text-decoration: none;
+                            color: $text-color-light;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+@media screen and (min-width: 768px) {
+    header{
+        nav{
+            .dekstop-items{
+                width: 60%;
+                ul{
+                    gap: 40px;
+                    margin-right: 32px;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}

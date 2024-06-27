@@ -1,0 +1,52 @@
+@use '../../../import' as *;
+
+footer{
+    .container{
+        padding: 20px 0;
+        width: 100%;
+        background-color: $footer-color;
+        min-height: 10vh;
+        margin: 0;
+        position: relative;
+        bottom: 0;
+        
+        .row{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            color: $text-color-light;
+            align-items: center;
+            gap: 10px;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color: $text-color-light;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    footer{
+        .container{
+            .row{
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                ul{
+                    flex-direction: row;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+    
+}
