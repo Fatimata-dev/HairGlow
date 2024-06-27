@@ -1,0 +1,35 @@
+<header>
+    <nav>
+        <a [routerLink]="['/home']">
+            <div class="logo">
+                    <img src="../../../assets/pictures/logo.png" alt="Logo">
+            </div>
+        </a>
+        <div class="mobile" (click)="toggleNavbar()">
+            <div  [class.open]="isOpen" class="bars">
+                <div  class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+           <div class="mobile-menu" *ngIf="isOpen">
+                <ul class="top-items">
+                    <li><a [routerLink]="['/home']">Profile</a></li>
+                    <li><a [routerLink]="['/recipes']">Recettes</a></li>
+                    <li><a [routerLink]="['/about']">Qui suis-je</a></li>
+                    <li><a [routerLink]="['/logout']">Déconnexion</a></li>
+                </ul> 
+           </div> 
+        </div>
+
+
+        <div class="dekstop-items">
+            <ul class="">
+                <li><a [routerLink]="['/home']">Profile</a></li>
+                <li><a [routerLink]="['/recipes']">Recettes</a></li>
+                <li><a [routerLink]="['/about']">Qui suis-je</a></li>
+                <li><a [routerLink]="['/logout']">Déconnexion</a></li>
+            </ul> 
+       </div> 
+       
+    </nav>
+</header>

@@ -1,0 +1,109 @@
+@use'../../../import' as *;
+.home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    h1{
+        font-size: 1.2rem;
+        color: $text-color;
+        text-align: center;
+        margin-top: 16px;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        gap: 20px;
+        .acrochP{
+            width: 90%;
+             margin-left: 16px;
+            p{
+                font-size: 1rem;
+                color: $text-color;
+                
+            }
+        }
+        .image{
+            width: 100%; 
+            height: 50vh;
+            overflow: hidden;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            margin: 0;
+            img{
+                width: auto;
+                height: auto; 
+                transform: scale(0.4);
+                transform-origin: center center;
+                object-fit: cover;
+            }
+        }
+        .welcom{
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            p{
+                font-size: 1rem;
+                color: $text-color;
+                font-weight: bold;
+            }
+        }
+        
+    }
+    .btn{
+        width: 90%;
+        margin-left: 8px;
+        padding-bottom: 24px;
+        a{
+            text-decoration: none;
+            color: $text-color-light;
+            background-color: $navbar-color;
+            padding: 12px 64px;
+            border-radius: 8px;
+            transition: all 0.3s;
+            &:hover{
+                background-color: $text-color;
+                color: $navbar-color;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px){
+    .home{
+        .container{
+            flex-direction: row;
+            align-items: center;
+            .acrochP{
+                width: 30%;
+                margin-left: 16px;
+            }
+            .image{
+                width: 50%;
+                height: 50vh;
+                img{
+                    transform: scale(0.6);
+                }
+            }
+            .welcom{
+                width: 30%;
+            }
+        }
+        .btn{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 10px;
+            a{
+                padding: 12px 80x;
+            }
+        
+        }
+    }
+    
+}
